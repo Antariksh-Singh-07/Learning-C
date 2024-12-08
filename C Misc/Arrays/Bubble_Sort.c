@@ -15,7 +15,6 @@ void swap(int *pX, int *pY) {
 }
 
 void bubble_sort(int arr[], int size) {
-    int p = 0;
     bool is_swapped;
     for (int i = 0; i < size - 1; i++) {
         is_swapped = false;
