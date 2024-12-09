@@ -15,8 +15,8 @@ void swap(int *pX, int *pY) {
 
 void selection_sort(int arr[], int size) {
     for (int i = 0; i < size - 1; i++) {
-        int min = i + 1;
-        for (int j = i + 2; j < size; j++) {
+        int min = i;
+        for (int j = i; j < size; j++) {
             if (arr[j] < arr[min]) { // change < with > for Descending
                 min = j;
             }
