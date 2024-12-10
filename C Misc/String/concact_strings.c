@@ -40,22 +40,21 @@ int main() {
 } */
 
 /* // using pointers
-void pointerconcat(char *str1, char *str2){
-    while (*str1)
-    {
+void pointerconcat(char *str1, char *str2) {
+    while (*str1) {
         *str1++;
     }
 
-    while (*str2)
-    {
+    while (*str2) {
         *str1 = *str2;
-        *str1++; *str2++;
+        *str1++;
+        *str2++;
     }
 
     *str1 = '\0';
 }
 
-int main(){
+int main() {
     char str1[26] = "Abhishek is ";
     char str2[] = "Sant Sanskari";
 
@@ -67,11 +66,11 @@ int main(){
 } */
 
 /* // using memcpy()
-int main(){
+int main() {
     char str1[26] = "Abhishek is ";
     char str2[] = "Sant Sanskari";
 
-    memcpy(str1 + strlen(str1), str2, strlen(str2)+1);
+    memcpy(str1 + strlen(str1), str2, strlen(str2) + 1);
 
     printf("%s", str1);
 
@@ -79,7 +78,7 @@ int main(){
 } */
 
 /* // using sprintf()
-int main(){
+int main() {
     char str1[26] = "Abhishek is ";
     char str2[] = "Sant Sanskari";
 
