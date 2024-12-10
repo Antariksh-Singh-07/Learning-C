@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -30,25 +31,33 @@ int main() {
 } */
 
 /* // using a frequency array
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
 char freqArrayCheck(char str[]) {
     int freq[26] = {0};
 
     for (int i = 0; str[i] != '\0'; i++) {
-        freq[str[i] - 'a']++;
+        if (isalpha(str[i])) {
+            freq[tolower(str[i]) - 'a']++;
+        }
     }
 
     for (int i = 0; str[i] != '\0'; i++) {
-        if (freq[str[i] - 'a'] == 1) {
+        if (isalpha(str[i]) && freq[tolower(str[i]) - 'a'] == 1) {
             return str[i];
         }
     }
+
     return '$';
 }
 
 int main() {
-    char str[] = "racecar";
+    char str[] = "Racecar";
 
     printf("%c", freqArrayCheck(str));
+
     return 0;
 } */
 
